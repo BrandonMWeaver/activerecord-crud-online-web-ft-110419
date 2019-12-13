@@ -4,7 +4,7 @@
 # def make_a_new_movie_instance    # def make_a_new_movie_instance
 #   movie = __                     #   movie = Movie.new
 # end                              # end
-require "pry"
+
 def can_be_instantiated_and_then_saved
   movie = Movie.new
   movie.title = "This is a title."
@@ -39,8 +39,7 @@ def can_be_created_in_a_block(args = nil)
   
   Movie.create do |m|
     m = Movie.new(args)
-    binding.pry
-  end
+  end.first
 end
 
 def can_get_the_first_item_in_the_database
