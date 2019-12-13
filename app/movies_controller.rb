@@ -39,7 +39,7 @@ def can_be_created_in_a_block(args = nil)
   
   Movie.create do |m|
     m = Movie.new(args)
-  end.first
+  end
 end
 
 def can_get_the_first_item_in_the_database
