@@ -40,7 +40,6 @@ def can_be_created_in_a_block(args = nil)
   Movie.create do |m|
     m = Movie.find_or_create_by(args)
   end
-  return nil
 end
 
 def can_get_the_first_item_in_the_database
