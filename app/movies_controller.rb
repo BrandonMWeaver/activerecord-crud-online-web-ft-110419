@@ -38,7 +38,7 @@ def can_be_created_in_a_block(args = nil)
   end
   
   Movie.create do |m|
-    m = Movie.new(args)
+    m(args)
   end
 end
 
