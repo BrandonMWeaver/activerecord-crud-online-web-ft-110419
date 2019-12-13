@@ -5,8 +5,6 @@
 #   movie = __                     #   movie = Movie.new
 # end                              # end
 
-require "pry"
-
 def can_be_instantiated_and_then_saved
   movie = Movie.new
   movie.title = "This is a title."
@@ -33,7 +31,6 @@ def can_be_created_in_a_block(args = nil)
   # release_date == 1990
   
   Movie.create do |m|
-    binding.pry
     Movie.new(m)
   end
 end
