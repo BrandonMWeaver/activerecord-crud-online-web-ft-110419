@@ -82,8 +82,8 @@ end
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
-  __
-  __
+  movie = Movie.find_by({title: "Wat?"})
+  movie.update({title: "Wat, huh?"})
 end
 
 def can_update_multiple_items_at_once
@@ -104,7 +104,5 @@ def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-  10.times do |i|
-    Movie.destroy({title: "Movie_#{i}"})
-  end
+  movie = Movie.find_by({title})
 end
